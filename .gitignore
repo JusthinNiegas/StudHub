@@ -49,6 +49,9 @@ app-example
 # vscode
 .vscode/
 
+# claude
+.claude/
+
 # logs
 logs
 *.log
