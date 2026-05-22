@@ -9,11 +9,53 @@ import {
   Platform,
   ScrollView,
   TextInput,
+  useWindowDimensions,
 } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function VerifyScreen() {
+  const { width, height } = useWindowDimensions();
+
+  // RESPONSIVE SIZES
+  const containerWidth =
+    width < 360
+      ? width * 0.94
+      : width < 768
+      ? width * 0.88
+      : 430;
+
+  const logoWidth =
+    width < 360
+      ? width * 0.9
+      : width < 768
+      ? width * 0.82
+      : 390;
+
+  const illustrationWidth =
+    width < 360
+      ? width * 0.52
+      : width < 768
+      ? width * 0.5
+      : 220;
+
+  const titleSize =
+    width < 360
+      ? 28
+      : width < 768
+      ? 34
+      : 38;
+
+  const inputFontSize =
+    width < 360
+      ? 14
+      : 16;
+
+  const buttonFontSize =
+    width < 360
+      ? 16
+      : 18;
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -28,13 +70,14 @@ export default function VerifyScreen() {
           flexGrow: 1,
           justifyContent: "center",
           alignItems: "center",
-          paddingVertical: 20,
+          paddingVertical: width < 360 ? 12 : 20,
+          minHeight: height,
         }}
       >
-        {/* MOBILE CONTAINER */}
+        {/* MAIN CONTAINER */}
         <View
           style={{
-            width: 340,
+            width: containerWidth,
             backgroundColor: "white",
             borderRadius: 35,
             overflow: "hidden",
@@ -44,7 +87,7 @@ export default function VerifyScreen() {
           <View
             style={{
               alignItems: "center",
-              backgroundColor: "#F3F4F6",
+              backgroundColor: "white",
               position: "relative",
             }}
           >
@@ -53,15 +96,15 @@ export default function VerifyScreen() {
               onPress={() => router.push("/(auth)/register")}
               style={{
                 position: "absolute",
-                top: 20,
-                left: 20,
+                top: width < 360 ? 14 : 20,
+                left: width < 360 ? 14 : 20,
                 zIndex: 10,
               }}
             >
               <Text
                 style={{
                   color: "#8B5CF6",
-                  fontSize: 18,
+                  fontSize: width < 360 ? 16 : 18,
                   fontWeight: "bold",
                 }}
               >
@@ -69,12 +112,12 @@ export default function VerifyScreen() {
               </Text>
             </TouchableOpacity>
 
-            {/* TEXT */}
+            {/* HEADER TEXT */}
             <Text
               style={{
                 color: "#8B5CF6",
-                fontSize: 14,
-                marginTop: 18,
+                fontSize: width < 360 ? 12 : 14,
+                marginTop: width < 360 ? 16 : 18,
                 marginBottom: 2,
               }}
             >
@@ -85,9 +128,9 @@ export default function VerifyScreen() {
             <Image
               source={require("../../../assets/images/logo.png")}
               style={{
-                width: 410,
-                height: 180,
-                marginBottom: -32,
+                width: logoWidth,
+                height: width < 360 ? 120 : 180,
+                marginBottom: width < 360 ? -20 : -32,
                 zIndex: 2,
               }}
               resizeMode="contain"
@@ -97,8 +140,8 @@ export default function VerifyScreen() {
             <Image
               source={require("../../../assets/images/illustration.png")}
               style={{
-                width: 220,
-                height: 145,
+                width: illustrationWidth,
+                height: width < 360 ? 120 : 145,
                 marginTop: -10,
               }}
               resizeMode="contain"
@@ -111,9 +154,9 @@ export default function VerifyScreen() {
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={{
-              paddingHorizontal: 25,
-              paddingTop: 28,
-              paddingBottom: 28,
+              paddingHorizontal: width < 360 ? 18 : 25,
+              paddingTop: width < 360 ? 22 : 28,
+              paddingBottom: width < 360 ? 18 : 28,
               borderTopLeftRadius: 38,
               borderTopRightRadius: 38,
               marginTop: -5,
@@ -123,7 +166,7 @@ export default function VerifyScreen() {
             <Text
               style={{
                 color: "white",
-                fontSize: 34,
+                fontSize: titleSize,
                 fontWeight: "bold",
                 marginBottom: 10,
               }}
@@ -135,26 +178,27 @@ export default function VerifyScreen() {
             <Text
               style={{
                 color: "white",
-                fontSize: 14,
+                fontSize: width < 360 ? 12 : 14,
                 marginBottom: 25,
-                lineHeight: 22,
+                lineHeight: width < 360 ? 20 : 22,
               }}
             >
               We sent a verification code to your email.
               Please enter the 6-digit code below.
             </Text>
 
-            {/* CODE INPUT */}
+            {/* CODE INPUT LABEL */}
             <Text
               style={{
                 color: "white",
                 marginBottom: 8,
-                fontSize: 16,
+                fontSize: inputFontSize,
               }}
             >
               Verification Code
             </Text>
 
+            {/* CODE INPUT */}
             <TextInput
               placeholder="******"
               placeholderTextColor="#9333EA"
@@ -164,10 +208,10 @@ export default function VerifyScreen() {
                 backgroundColor: "#FFF2B2",
                 borderRadius: 999,
                 paddingHorizontal: 20,
-                paddingVertical: 14,
+                paddingVertical: width < 360 ? 12 : 14,
                 marginBottom: 20,
-                fontSize: 20,
-                letterSpacing: 8,
+                fontSize: width < 360 ? 18 : 20,
+                letterSpacing: width < 360 ? 5 : 8,
                 textAlign: "center",
               }}
             />
@@ -178,7 +222,7 @@ export default function VerifyScreen() {
                 borderWidth: 2,
                 borderColor: "white",
                 borderRadius: 999,
-                paddingVertical: 12,
+                paddingVertical: width < 360 ? 10 : 12,
                 alignItems: "center",
                 marginBottom: 18,
               }}
@@ -187,7 +231,7 @@ export default function VerifyScreen() {
                 style={{
                   color: "white",
                   fontWeight: "bold",
-                  fontSize: 18,
+                  fontSize: buttonFontSize,
                 }}
               >
                 Verify
@@ -200,12 +244,13 @@ export default function VerifyScreen() {
                 flexDirection: "row",
                 justifyContent: "center",
                 alignItems: "center",
+                flexWrap: "wrap",
               }}
             >
               <Text
                 style={{
                   color: "white",
-                  fontSize: 12,
+                  fontSize: width < 360 ? 11 : 12,
                 }}
               >
                 Didn’t receive the code?{" "}
@@ -215,7 +260,7 @@ export default function VerifyScreen() {
                 <Text
                   style={{
                     color: "white",
-                    fontSize: 12,
+                    fontSize: width < 360 ? 11 : 12,
                     fontWeight: "bold",
                   }}
                 >
