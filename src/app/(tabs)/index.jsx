@@ -120,7 +120,7 @@ export default function DashboardScreen() {
       <View
         style={{
           flex: 1,
-          maxWidth: 430,
+          maxWidth: isTablet ? 900 : 430,
           width: "100%",
           alignSelf: "center",
           backgroundColor: "#F5F4FF",
@@ -129,7 +129,7 @@ export default function DashboardScreen() {
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
-            paddingBottom: 140,
+            paddingBottom: isTablet ? 120 : 140,
           }}
         >
           {/* HEADER */}
@@ -143,9 +143,9 @@ export default function DashboardScreen() {
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={{
-              paddingTop: 60,
-              paddingHorizontal: 20,
-              paddingBottom: 24,
+              paddingTop: isTablet ? 40 : 60,
+              paddingHorizontal: isTablet ? 30 : 20,
+              paddingBottom: isTablet ? 30 : 24,
               borderBottomLeftRadius: 28,
               borderBottomRightRadius: 28,
             }}
@@ -344,8 +344,8 @@ export default function DashboardScreen() {
           {/* BODY */}
           <View
             style={{
-              paddingHorizontal: 16,
-              paddingTop: 20,
+              paddingHorizontal: isTablet ? 28 : 16,
+              paddingTop: isTablet ? 28 : 20,
             }}
           >
             {/* QUICK ACTIONS */}
@@ -373,7 +373,7 @@ export default function DashboardScreen() {
                   <TouchableOpacity
                     key={index}
                     style={{
-                      width: "30%",
+                      width: isTablet ? "31%" : "30%",
                       alignItems: "center",
                     }}
                   >
@@ -449,7 +449,7 @@ export default function DashboardScreen() {
                     style={{
                       backgroundColor: "white",
                       borderRadius: 16,
-                      padding: 14,
+                      padding: isTablet ? 18 : 14,
                       marginBottom: 10,
                       flexDirection: "row",
                       alignItems: "center",
@@ -762,7 +762,7 @@ export default function DashboardScreen() {
                     <View
                       key={index}
                       style={{
-                        width: "23%",
+                        width: isTablet ? "24%" : "23%",
                         backgroundColor: "#F5F4FF",
                         borderRadius: 16,
                         paddingVertical: 14,
@@ -910,7 +910,7 @@ export default function DashboardScreen() {
             right: 12,
             backgroundColor: "rgba(255,255,255,0.95)",
             borderRadius: 32,
-            paddingHorizontal: 8,
+            paddingHorizontal: 4,
             paddingVertical: 10,
             flexDirection: "row",
             justifyContent: "space-between",
@@ -939,7 +939,7 @@ export default function DashboardScreen() {
                     colors={["#111827", "#1F2937"]}
                     style={{
                       paddingVertical: 10,
-                      width: 54,
+                      width: 48,
                       borderRadius: 18,
                       alignItems: "center",
                     }}
@@ -956,7 +956,7 @@ export default function DashboardScreen() {
                     <Text
                       style={{
                         color: "white",
-                        fontSize: 10,
+                        fontSize: 9,
                         fontWeight: "700",
                       }}
                     >

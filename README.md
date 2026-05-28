@@ -1,56 +1,169 @@
-# Welcome to your Expo app 👋
+# 📚 StudHub
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Your all-in-one student productivity companion.
 
-## Get started
+StudHub is a premium productivity mobile application designed for students who want to stay organized, focused, and productive. Built with **React Native** and **Expo**, StudHub combines task management, budgeting, scheduling, and AI-powered assistance into one modern experience.
 
-1. Install dependencies
+Designed with a clean and responsive UI inspired by modern productivity apps.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+# ✨ Features
 
-   ```bash
-   npx expo start
-   ```
+## ✅ Smart Task Management
 
-In the output, you'll find options to open the app in a
+* Create and manage daily tasks
+* Progress tracking
+* Task priorities
+* Subtasks support
+* Completed task organization
+* Category filtering
+* Overdue task tracking
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📅 Calendar & Scheduling
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+* Daily planning
+* Event organization
+* Upcoming schedules
+* Academic planning
 
-## Get a fresh project
+## 💰 Student Budget Tracker
 
-When you're ready, run:
+* Expense tracking
+* Savings goals
+* Budget monitoring
+* Spending categories
+* Allowance management
+
+## ✨ AI Productivity Assistant
+
+* Smart study assistance
+* Productivity recommendations
+* AI-powered support tools
+
+## 🎨 Modern User Experience
+
+* Responsive mobile & tablet layout
+* Smooth gradients
+* Floating navigation
+* Glassmorphism-inspired UI
+* Clean and minimal design
+
+---
+
+# 📱 Platforms
+
+StudHub is being developed for:
+
+* iOS
+* Android
+
+Built using:
+
+* React Native
+* Expo
+* Expo Router
+
+---
+
+# 🛠 Tech Stack
+
+* React Native
+* Expo
+* Expo Router
+* JavaScript
+* Expo Linear Gradient
+
+---
+
+# 🚀 Getting Started
+
+## Clone the repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/studhub.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Navigate to the project
 
-### Other setup steps
+```bash
+cd studhub
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Install dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Start development server
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo start
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+# 📂 Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+app/
+ ├── index.jsx
+ ├── task.jsx
+ ├── calendar.jsx
+ ├── finance.jsx
+ ├── ai.jsx
+ ├── profile.jsx
+ └── _layout.jsx
+```
+
+---
+
+# 🎨 Design Philosophy
+
+StudHub focuses on:
+
+* Simplicity
+* Productivity
+* Accessibility
+* Modern UI/UX
+* Student-centered workflows
+
+The interface is optimized for both casual and power users.
+
+---
+
+# 🔒 Privacy
+
+StudHub values user privacy and data security. User data is handled responsibly and future releases will include secure cloud synchronization and authentication.
+
+---
+
+# 📌 Roadmap
+
+Upcoming features:
+
+* Cloud Sync
+* Firebase Authentication
+* Push Notifications
+* Real AI Chat System
+* Dark Mode
+* Analytics Dashboard
+* Study Timer / Pomodoro
+* Notes & Flashcards
+
+---
+
+# 👨‍💻 Developer
+
+Developed by James Justhin D. Niegas
+
+BSIT Student • Mobile Developer • UI/UX Enthusiast
+
+---
+
+# 📄 License
+
+Copyright © 2026 StudHub.
+
+All rights reserved.
